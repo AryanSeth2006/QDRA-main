@@ -1,0 +1,111 @@
+
+  
+   .clock{
+    display: flex;
+    justify-content: center;
+    margin-left: 2px;
+    width: 366px;
+    height: 600px;
+    font-size: 12px;
+    background: url('https://i.pinimg.com/236x/65/92/c7/6592c7a36a23bf2e5d93151525cdf4ce.jpg');
+    align-items: center;
+  }
+  
+  .clock-container {
+    text-align: center;
+  }
+  
+  .countdown-container {
+    display: flex;
+    flex-direction: row !important;
+    gap: 5px;
+    width: 100%;
+    max-width: 70%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .days-container,
+  .hours-container,
+  .minutes-container, 
+  .seconds-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.1);
+    border: 5px solid rgba(255,255,255,0.3);
+    width: 150px;
+    height: 150px;
+    border-radius: 99px;
+  }
+  
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 2.5em; 
+    margin: 10px 0;
+  }
+  
+  .days-label,
+  .hours-label,
+  .minutes-label,
+  .seconds-label {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .start-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 800px) {
+    .countdown-container {
+      max-width: 90%;
+    }
+    
+    .days-container,
+    .hours-container,
+    .minutes-container, 
+    .seconds-container {
+      font-size: 0.8em;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .countdown-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .days-container,
+    .hours-container,
+    .minutes-container, 
+    .seconds-container {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .start-button {
+      width: 100%;
+      font-size: 0.9em;
+    }
+  }
+  
+.br_p{
+  font-size: 16px;
+  border: 1px solid white;
+
+  box-sizing: border-box;
+  margin: 0;
+  
+}
