@@ -111,7 +111,7 @@ const Clock: React.FC = () => {
               <div className="seconds-label">seconds</div>
             </div>
           </section>
-          <button onClick={startTimer} className="start-button">Start</button>
+          <button onClick={startTimer} className="start-button bg-yellow-500">Start</button>
           <p className=" border-white! br_p pt-px text-[#FFF455]">Complete the countdown to earn 15k coins!</p> {/* Added p tag */}
 
         </div>

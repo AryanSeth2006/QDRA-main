@@ -7,7 +7,7 @@
     width: 366px;
     height: 600px;
     font-size: 12px;
-    background: url('https://i.pinimg.com/236x/65/92/c7/6592c7a36a23bf2e5d93151525cdf4ce.jpg');
+    background: url('./images/mining.jpg');
     align-items: center;
   }
   
@@ -60,8 +60,8 @@
     padding: 10px 20px;
     font-size: 1em;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
     border: none;
+   
     border-radius: 5px;
     cursor: pointer;
   }
