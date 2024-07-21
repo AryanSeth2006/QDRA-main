@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { coin } from '../images/index.js';
+
 import './clock.css';
 
 const Clock: React.FC = () => {
@@ -87,8 +87,8 @@ const Clock: React.FC = () => {
         <div className="flex coin_wallet absolute top-0 w-full px-3 pt-20 z-10 flex-col items-center text-white">
           <div className="flex py-auto align-top justify-center coin_system">
             <div className="mt-12 text-5xl font-bold flex items-center">
-              <img src={coin} width={44} height={44} alt="coin" />
-              <span className="ml-2 text-[35px] text-yellow-500">{walletBalance}</span>
+              <img src="./images/logo.png" className=''  width={60} height={44} alt="coin" />
+              <span className="ml-[-10px] gap-0 text-[35px] text-yellow-500">{walletBalance}</span>
             </div>
             <div className="flex flex-col justify-end top-7 relative right-20 items-center text-center">
               <h1 className="text-sm text-yellow-400 text-center align-middle font-semibold">-QDRA Wallet</h1>

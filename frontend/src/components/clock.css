@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     margin-left: 2px;
-    width: 366px;
+    width: 370px;
     height: 600px;
     font-size: 12px;
     background: url('./images/mining.jpg');
@@ -20,7 +20,8 @@
     flex-direction: row !important;
     gap: 5px;
     width: 100%;
-    max-width: 70%;
+    
+    max-width: 80%;
     justify-content: space-between;
     margin-bottom: 20px;
   }
@@ -34,9 +35,9 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(0,0,0,0.1);
-    border: 5px solid rgba(255,255,255,0.3);
-    width: 150px;
-    height: 150px;
+    border: 5px solid hwb(56 0% 3%);
+    width: 160px;
+    height: 160px;
     border-radius: 99px;
   }
   
