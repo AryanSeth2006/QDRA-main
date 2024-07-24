@@ -89,9 +89,7 @@ const CheckoutCard: React.FC = () => {
         </nav>
         <section className="mt-4">
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-x-4 md:space-y-0">
-            <div className="w-40 flex justify-center">
-              <img src={qr_code} alt={wallet.name} className="rounded-lg" />
-            </div>
+           
             <div className="text-center md:text-left">
               <div className="text-xl text-yellow-400 font-bold">Donate BNB</div>
               <div className="text-gray-600">

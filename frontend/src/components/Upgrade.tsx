@@ -45,7 +45,7 @@ const Upgrade: React.FC = () => {
   return (
     <div className="container mx-auto px-4 h-full bg-[url('https://i.pinimg.com/236x/1f/35/60/1f3560b7cc4831777cc729929042d00d.jpg')] bg-cover bg-center flex justify-center items-center">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 py-12">
-        <div className="card p-6 md:p-8 lg:p-12 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
+        <div className="card p-6 md:p-8 lg:p-12 bg-opacity-10 border bg-white border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
           <p className="pricing text-3xl md:text-4xl lg:text-6xl">
             Free
             <span className="small text-xs md:text-sm">/per month</span>
@@ -64,7 +64,7 @@ const Upgrade: React.FC = () => {
           </button>
         </div>
 
-        <div className="card p-6 md:p-8 lg:p-12 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
+        <div className="card p-6 md:p-8 lg:p-12 bg-[#A67B5B] bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
           <p className="pricing text-3xl md:text-4xl lg:text-6xl">
             2$
             <span className="small text-xs md:text-sm">/per month</span>
@@ -80,11 +80,11 @@ const Upgrade: React.FC = () => {
           </ul>
           <button 
             onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
-            className="cta_btn block w-full text-center bg-black bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
+            className="cta_btn block w-full text-center bg-[#A67B5B] bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
             Buy Now
           </button>
         </div>
-        <div className="card p-6 md:p-8 lg:p-12 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
+        <div className="card p-6 md:p-8 lg:p-12 bg-gray-500 bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
           <p className="pricing text-3xl md:text-4xl lg:text-6xl">
             4$
             <span className="small text-xs md:text-sm">/per month</span>
@@ -100,11 +100,11 @@ const Upgrade: React.FC = () => {
           </ul>
           <button 
             onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
-            className="cta_btn block w-full text-center bg-black bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
+            className="cta_btn block w-full text-center bg-gray-500 bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
             Buy Now
           </button>
         </div>
-        <div className="card p-6 md:p-8 lg:p-12 text-yellow-400 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
+        <div className="card p-6 md:p-8 lg:p-12 text-yellow-400 bg-yellow-500 bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
           <p className="pricing text-3xl md:text-4xl lg:text-6xl">
             7$
             <span className="small text-xs md:text-sm">/per month</span>
@@ -119,7 +119,7 @@ const Upgrade: React.FC = () => {
           </ul>
           <button 
             onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
-            className="cta_btn block w-full text-center bg-black bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
+            className="cta_btn block w-full text-center bg-yellow-500 bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
             Buy Now
           </button>
         </div>

@@ -23,7 +23,7 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-[url('https://img.freepik.com/premium-photo/bitcoin-cryptocurrency-symbol-blockchain-technology-background-d-rendering_601748-9884.jpg')]">
+    <div className="flex items-center justify-center h-screen bg-[url('./images/login.jpg')]">
       <div className="relative w-full max-w-md p-8 bg-white bg-opacity-10 border-2 border-white border-opacity-70 rounded-lg backdrop-blur-lg">
         <h1 className="text-2xl text-center text-white mb-6">Sign Up</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
