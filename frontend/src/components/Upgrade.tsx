@@ -46,7 +46,6 @@ const Upgrade: React.FC = () => {
     <div className="container mx-auto px-4 h-full bg-[url('https://i.pinimg.com/236x/1f/35/60/1f3560b7cc4831777cc729929042d00d.jpg')] bg-cover bg-center flex justify-center items-center">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 py-12">
         <div className="card p-6 md:p-8 lg:p-12 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
-        <h2 className="card_title text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6">Lite</h2>
           <p className="pricing text-3xl md:text-4xl lg:text-6xl">
             Free
             <span className="small text-xs md:text-sm">/per month</span>
@@ -66,7 +65,6 @@ const Upgrade: React.FC = () => {
         </div>
 
         <div className="card p-6 md:p-8 lg:p-12 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
-          <h2 className="card_title text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6">Pro</h2>
           <p className="pricing text-3xl md:text-4xl lg:text-6xl">
             2$
             <span className="small text-xs md:text-sm">/per month</span>
