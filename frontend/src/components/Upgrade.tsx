@@ -54,9 +54,9 @@ const Upgrade: React.FC = () => {
           <p className='text-[40px] font-semibold'>Free Forever</p>
           <hr className="my-6 md:my-8" />
           <ul className="features space-y-2">
-            <li>At level 1 cost 10k coins gives 7500 + default value.</li>
-            <li>At level 2 cost 15k coins gives 12500 + value after level 1.</li>
-            <li>At level 3 cost 20k coins gives 18000+ value after level 2.</li>
+            <li>At Bronze cost 10k coins gives 7500 + default value.</li>
+            <li>At Silver cost 15k coins gives 12500 + value after level 1.</li>
+            <li>At Gold cost 20k coins gives 18000+ value after level 2.</li>
           </ul>
           <button 
             onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
@@ -72,15 +72,52 @@ const Upgrade: React.FC = () => {
             <span className="small text-xs md:text-sm">/per month</span>
           </p>
           <p>Save $24</p>
-          <h1 className='text-white font-semi-bold text-[40px]'>Pro</h1>
+          <h1 className='text-[#A67B5B] font-semi-bold text-[40px]'>Bronze </h1>
           <hr className="my-6 md:my-8" />
           <ul className="features space-y-2">
-            <li>Level 1
-            Costs 2 dollars gets 40k + default value.</li>
+          
+          <li>Level 1
+          Costs 2 dollars gets 40k + default value.</li>
+           
+          </ul>
+          <button 
+            onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
+            className="cta_btn block w-full text-center bg-black bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
+            Buy Now
+          </button>
+        </div>
+        <div className="card p-6 md:p-8 lg:p-12 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
+          <p className="pricing text-3xl md:text-4xl lg:text-6xl">
+            4$
+            <span className="small text-xs md:text-sm">/per month</span>
+          </p>
+          <p>Save $24</p>
+          <h1 className='text-[#B5C0D0] font-semi-bold text-[40px]'>Silver</h1>
+          <hr className="my-6 md:my-8" />
+          <ul className="features space-y-2">
+        
             <li>Level 2
             Costs 4 dollars gets 90k + default value.</li>
-            <li>Level 3
-            Costs 7 dollars gets 150k + default value.</li>
+       
+          </ul>
+          <button 
+            onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
+            className="cta_btn block w-full text-center bg-black bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
+            Buy Now
+          </button>
+        </div>
+        <div className="card p-6 md:p-8 lg:p-12 text-yellow-400 bg-white bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg rounded-2xl">
+          <p className="pricing text-3xl md:text-4xl lg:text-6xl">
+            7$
+            <span className="small text-xs md:text-sm">/per month</span>
+          </p>
+          <p>Save $24</p>
+          <h1 className='text-yellow-300 font-semi-bold text-[40px]'>Gold</h1>
+          <hr className="my-6 md:my-8" />
+          <ul className="features space-y-2">
+        
+            <li>Level 3 Costs 7 dollars gets 150k + default value.</li>
+       
           </ul>
           <button 
             onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
@@ -89,6 +126,7 @@ const Upgrade: React.FC = () => {
           </button>
         </div>
       </div>
+      
       <a href="https://youtu.be/RLReK22LWTo" target="_blank" className="link fixed bg-red-600 px-8 py-4 md:px-10 md:py-6 right-[-99px] rounded-md top-1/2 transform -translate-y-1/2 rotate-90 text-white font-medium capitalize transition-all hover:bg-black">
         Watch on YouTube <i className="fab fa-youtube pl-2"></i>
       </a>
