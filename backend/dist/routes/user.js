@@ -36,9 +36,9 @@ router.get('/user', authMiddleware_1.authenticateToken, (req, res) => __awaiter(
     }
 }));
 router.get('/profile', authMiddleware_1.authenticateToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
+    var _b;
     try {
-        const userId = (_a = req.user) === null || _a === void 0 ? void 0 : _a.id;
+        const userId = (_b = req.user) === null || _b === void 0 ? void 0 : _b.id;
         if (!userId) {
             return res.status(404).json({ message: 'User not found' });
         }

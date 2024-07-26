@@ -42,6 +42,9 @@ const Upgrade: React.FC = () => {
       console.error('Error:', error);
   }
 };
+ const check= async function () {
+  window.location.href = '/checkout';
+ }
   return (
     <div className="container mx-auto px-4 h-full bg-[url('https://i.pinimg.com/236x/1f/35/60/1f3560b7cc4831777cc729929042d00d.jpg')] bg-cover bg-center flex justify-center items-center">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 py-12">
@@ -58,7 +61,7 @@ const Upgrade: React.FC = () => {
             <li>At Gold cost 20k coins gives 18000+ value after level 2.</li>
           </ul>
           <button 
-            onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
+            onClick={check}
             className="cta_btn block w-full text-center bg-black bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
             Buy Now
           </button>
@@ -99,7 +102,7 @@ const Upgrade: React.FC = () => {
        
           </ul>
           <button 
-            onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
+            onClick={check}
             className="cta_btn block w-full text-center bg-gray-500 bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
             Buy Now
           </button>
@@ -118,7 +121,7 @@ const Upgrade: React.FC = () => {
        
           </ul>
           <button 
-            onClick={() => handlePurchase('price_1PaLQeAI0MKbyJD7DUJYO5uA')}
+            onClick={check}
             className="cta_btn block w-full text-center bg-yellow-500 bg-opacity-70 rounded-xl py-3 md:py-4 text-white transition-colors hover:bg-opacity-100 mt-4 md:mt-6">
             Buy Now
           </button>
