@@ -51,6 +51,9 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
   }
+  .container{
+    font-size: large;
+  }
 }
 
 /*=============== BASE ===============*/
@@ -262,4 +265,10 @@ img {
   .footer__social {
     column-gap: 1.5rem;
   }
+}
+
+@media screen and (min-width: 1150px) {
+ .container{
+  height: 100px; 
+ } 
 }

@@ -48,86 +48,71 @@ const Mission: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto py-auto flex flex-col h-[700px] text-white bg-[#151515]">
-      <h2 className="text-[27px] mb-6 text-start py-8 w-auto leading-6 h-[40px] font-semibold text-white">
+    <div className="container mx-auto flex flex-col items-center h-[700px] text-white bg-[#151515] py-8 pb-0 mb-0">
+      <h2 className="text-5xl pb-10 mb-8 max-lg:text-3xl  text-center font-semibold">
         <span className="text-[#F4CE14]">Follow Us</span> and Get Rewarded!
       </h2>
       <div
-        className="main flex flex-wrap flex-col justify-start w-full h-[full] relative"
+        className="flex flex-col items-center w-full h-full relative"
         id="social-section"
         style={{ backgroundColor }}
       >
         <img
-          className="flex flex-wrap absolute left-[20%] top-[-15%] align-middle items-center w-[300px] h-auto"
+          className="absolute left-1/2 top-[-10%] transform -translate-x-1/2 w-40 h-auto"
           src={q_coin}
           alt="coin"
         />
-        <div className="py-12 items-center flex flex-wrap justify-center">
-          <div className="social-container absolute top-[100%] left-[17%]">
+        <div className="py-12 flex flex-col items-center justify-center w-full">
+          <div className="flex flex-col items-center space-y-6">
             <a
               href="https://x.com/qudracommunity"
-              className="twitter bg-[#0F67B1] rounded-lg shadow-lg font-regular"
+              className="twitter bg-[#0F67B1] rounded-lg shadow-lg w-64 text-center py-2"
               onMouseEnter={() => handleMouseEnter("color-twitter")}
               onMouseLeave={handleMouseLeave}
               onClick={() => handleFollow("twitter")}
             >
-              <i className="ri-telegram-fill"></i>
-              <i className="fa fa-twitter"></i>Telegram
-              <i className="text-end pl-4 font-bold text-[#F4CE14]">
-                +5000 coins
-              </i>
+              <i className="fa fa-twitter mr-2"></i>Telegram
+              <span className="ml-4 font-bold text-[#F4CE14]">+5000 coins</span>
             </a>
             <a
               href="https://x.com/qudracommunity"
-              className="twitter bg-[#3FA2F6] rounded-lg shadow-lg"
+              className="twitter bg-[#3FA2F6] rounded-lg shadow-lg w-64 text-center py-2"
               onMouseEnter={() => handleMouseEnter("color-twitter")}
               onMouseLeave={handleMouseLeave}
               onClick={() => handleFollow("twitter")}
             >
-              <i className="ri-twitter-x-line"></i>
-              <i className="fa fa-twitter"></i>Twitter
-              <i className="text-end pl-4 font-bold text-[#F4CE14]">
-                +5000 coins
-              </i>
+              <i className="fa fa-twitter mr-2"></i>Twitter
+              <span className="ml-4 font-bold text-[#F4CE14]">+5000 coins</span>
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61561154702697&mibextid=ZbWKwL"
-              className="facebook bg-[#4A249D] rounded-lg"
+              className="facebook bg-[#4A249D] rounded-lg shadow-lg w-64 text-center py-2"
               onMouseEnter={() => handleMouseEnter("color-facebook")}
               onMouseLeave={handleMouseLeave}
               onClick={() => handleFollow("facebook")}
             >
-              <i className="ri-facebook-circle-fill"></i>
-              <i className="fa fa-facebook"></i>Facebook
-              <i className="text-end pl-4 font-bold text-[#F4CE14]">
-                +5000 coins
-              </i>
+              <i className="fa fa-facebook mr-2"></i>Facebook
+              <span className="ml-4 font-bold text-[#F4CE14]">+5000 coins</span>
             </a>
             <a
               href="https://t.me/qudracommunity"
-              className="Youtube bg-[#C80036] rounded-lg"
+              className="youtube bg-[#C80036] rounded-lg shadow-lg w-64 text-center py-2"
               onMouseEnter={() => handleMouseEnter("color-pinterest")}
               onMouseLeave={handleMouseLeave}
               onClick={() => handleFollow("youtube")}
             >
-              <i className="ri-youtube-fill"></i>
-              <i className="fa fa-pinterest"></i>Youtube
-              <i className="text-end pl-4 font-bold text-[#F4CE14]">
-                +5000 coins
-              </i>
+              <i className="fa fa-youtube mr-2"></i>Youtube
+              <span className="ml-4 font-bold text-[#F4CE14]">+5000 coins</span>
             </a>
             <a
               href="https://www.instagram.com/qudracommunity?igsh=dGRtZTJibDBzczg="
-              className="instagram bg-[#FF5BAE] rounded-lg"
+              className="instagram bg-[#FF5BAE] rounded-lg shadow-lg w-64 text-center py-2"
               onMouseEnter={() => handleMouseEnter("color-instagram")}
               onMouseLeave={handleMouseLeave}
               onClick={() => handleFollow("instagram")}
             >
-              <i className="ri-instagram-line"></i>
-              <i className="fa fa-instagram"></i>Instagram
-              <i className="text-end pl-4 font-bold text-[#F4CE14]">
-                +5000 coins
-              </i>
+              <i className="fa fa-instagram mr-2"></i>Instagram
+              <span className="ml-4 font-bold text-[#F4CE14]">+5000 coins</span>
             </a>
           </div>
         </div>

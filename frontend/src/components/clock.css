@@ -1,19 +1,9 @@
 
-  
-   .clock{
-    display: flex;
-    justify-content: center;
-    margin-left: 2px;
-    width: 370px;
-    height: 600px;
-    font-size: 12px;
-    background: url('./images/mining.jpg');
-    align-items: center;
-  }
-  
-  .clock-container {
-    text-align: center;
-  }
+.clock {
+  background: url('./images/mining.jpg');
+  width: auto;
+}
+
   
   .countdown-container {
     display: flex;
@@ -102,11 +92,16 @@
     }
   }
   
-.br_p{
+@media screen and (min-width: 1150px) {
+  .clock{
+    width: 1700px;
+  }
+}
+
+
+.br_p {
   font-size: 16px;
   border: 1px solid white;
-
   box-sizing: border-box;
   margin: 0;
-  
 }

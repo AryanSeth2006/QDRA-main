@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="bg-[#2D2727] w-full mt-auto">
-      <div className="container px-4 py-8  md:px-0 grid gap-4 text-center md:grid-cols-3 text-white">
+    <footer className="bg-[#2D2727]  flex text-center justify-center w-full mt-auto">
+      <div className="container px-4 py-8 text-4xl  max-lg:w-full md:px-0 grid gap-4 text-center md:grid-cols-3 text-white">
         <div className="grid gap-5 ">
           <ul className="flex flex-row justify-center gap-4 text-lg md:text-base">
             <li>

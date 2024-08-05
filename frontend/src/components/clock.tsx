@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import './clock.css';
 
 const Clock: React.FC = () => {
@@ -80,42 +79,38 @@ const Clock: React.FC = () => {
   const seconds = timeLeft % 60;
 
   return (
-    <div>
-      <div className="clock ">
-        <div className='bg-blue-600'>
-        </div>
-        <div className="flex coin_wallet absolute top-0 w-full px-3 pt-20 z-10 flex-col items-center text-white">
-          <div className="flex py-auto align-top justify-center coin_system">
-            <div className="mt-12 text-5xl font-bold flex items-center">
-              <img src="./images/logo.png" className=''  width={60} height={44} alt="coin" />
-              <span className="ml-[-10px] gap-0 text-[35px] text-yellow-500">{walletBalance}</span>
-            </div>
-            <div className="flex flex-col justify-end top-7 relative right-20 items-center text-center">
-              <h1 className="text-sm text-yellow-400 text-center align-middle font-semibold">-QDRA Wallet</h1>
-            </div>
+    <div className="clock flex flex-col items-center justify-center min-h-screen  text-white">
+      <div className="relative w-full max-w-2xl p-5 mx-4 bg-black bg-opacity-50 rounded-lg shadow-md">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-4">
+          <div className="flex items-center">
+            <img src="./images/logo.png" width={60} height={44} alt="coin" />
+            <span className="ml-2 text-4xl md:text-5xl text-yellow-500">{walletBalance}</span>
+          </div>
+          <div className="flex flex-col items-center ml-0 md:ml-4 mt-4 md:mt-0">
+            <h1 className="text-sm md:text-base text-yellow-400 font-semibold">-QDRA Wallet</h1>
           </div>
         </div>
 
-        <div className="clock-container">
-          <section className="countdown-container">
-            <div className="hours-container">
-              <div className="hours">{hours}</div>
-              <div className="hours-label">hours</div>
+        <div className="clock-container flex flex-col items-center text-center">
+          <section className="countdown-container flex flex-col sm:flex-row justify-around w-full mb-4 gap-2 sm:gap-5">
+            <div className="hours-container flex flex-col items-center justify-center bg-gray-700 border-yellow-500 border-2 rounded-full w-20 h-20 sm:w-40 sm:h-40">
+              <div className="hours text-2xl sm:text-3xl">{hours}</div>
+              <div className="hours-label text-sm sm:text-base">hours</div>
             </div>
-            <div className="minutes-container">
-              <div className="minutes">{minutes}</div>
-              <div className="minutes-label">minutes</div>
+            <div className="minutes-container flex flex-col items-center justify-center bg-gray-700 border-yellow-500 border-2 rounded-full w-20 h-20 sm:w-40 sm:h-40">
+              <div className="minutes text-2xl sm:text-3xl">{minutes}</div>
+              <div className="minutes-label text-sm sm:text-base">minutes</div>
             </div>
-            <div className="seconds-container">
-              <div className="seconds">{seconds < 10 ? `0${seconds}` : seconds}</div>
-              <div className="seconds-label">seconds</div>
+            <div className="seconds-container flex flex-col items-center justify-center bg-gray-700 border-yellow-500 border-2 rounded-full w-20 h-20 sm:w-40 sm:h-40">
+              <div className="seconds text-2xl sm:text-3xl">{seconds < 10 ? `0${seconds}` : seconds}</div>
+              <div className="seconds-label text-sm sm:text-base">seconds</div>
             </div>
           </section>
-          <button onClick={startTimer} className="start-button bg-yellow-500">Start</button>
-          <p className=" border-white! br_p pt-px text-[#FFF455]">Complete the countdown to earn 15k coins!</p> {/* Added p tag */}
-
+          <button onClick={startTimer} className="start-button bg-yellow-500 py-2 px-4 mt-4 text-lg rounded-lg w-full sm:w-auto">
+            Start
+          </button>
+          <p className="mt-2 text-sm sm:text-base text-[#FFF455]">Complete the countdown to earn 15k coins!</p>
         </div>
-
       </div>
     </div>
   );

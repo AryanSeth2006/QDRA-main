@@ -24,6 +24,8 @@ const Navbar: React.FC = () => {
     localStorage.removeItem('token');
     // Update isAuthenticated state
     setIsAuthenticated(false);
+    window.location.reload();
+
     // Redirect to home or any other desired route after logout
     window.location.href = '/';
   };
