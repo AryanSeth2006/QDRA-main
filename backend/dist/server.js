@@ -25,18 +25,26 @@ const authMiddleware_1 = require("./middleware/authMiddleware");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 5000;
-const stripe = new stripe_1.default(process.env.STRIPE_SECRET_KEY);
-app.use((0, cors_1.default)());
+const stripe = new stripe_1.default(process.env.STRIPE_SECRET_KEY); // Adjust Stripe API version as needed
+// Middleware
+app.use((0, cors_1.default)({ origin: 'https://qdra-main.vercel.app' })); // Use the correct CORS configuration
 app.use(body_parser_1.default.json());
+// Database connection
 mongoose_1.default.connect(process.env.MONGODB_URI, {})
     .then(() => console.log('Connected to MongoDB'))
     .catch((error) => console.error('Error connecting to MongoDB:', error));
+// Routes
 app.use('/api/auth', auth_1.default);
 app.use('/api', user_1.default);
 app.use('/api/user', user_1.default);
+// Test route
 app.get('/', (req, res) => {
     res.send('Server is running');
 });
+app.get('/test', (req, res) => {
+    res.send('working');
+});
+// Stripe Checkout Session route
 app.post('/create-checkout-session', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { priceId } = req.body;
     try {
@@ -59,6 +67,7 @@ app.post('/create-checkout-session', (req, res) => __awaiter(void 0, void 0, voi
         res.status(500).json({ error: 'Failed to create checkout session' });
     }
 }));
+// Stripe Webhook route
 app.post('/webhook', body_parser_1.default.raw({ type: 'application/json' }), (req, res) => {
     const event = req.body;
     switch (event.type) {
@@ -75,6 +84,7 @@ app.post('/webhook', body_parser_1.default.raw({ type: 'application/json' }), (r
     }
     res.json({ received: true });
 });
+// Get Wallet Balance route
 app.get('/api/getWalletBalance', authMiddleware_1.authenticateToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     try {
@@ -89,6 +99,7 @@ app.get('/api/getWalletBalance', authMiddleware_1.authenticateToken, (req, res) 
         res.status(500).send('Server error');
     }
 }));
+// Update Coins route
 app.post('/api/updateCoins', authMiddleware_1.authenticateToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     try {
@@ -117,7 +128,7 @@ app.post('/api/updateCoins', authMiddleware_1.authenticateToken, (req, res) => _
         res.status(500).send('Server error');
     }
 }));
-// API endpoint to save transaction ID
+// Save Transaction ID route
 app.post('/api/save-transaction', authMiddleware_1.authenticateToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const { transactionId } = req.body;
@@ -139,10 +150,12 @@ app.post('/api/save-transaction', authMiddleware_1.authenticateToken, (req, res)
         res.status(500).json({ message: 'Error saving transaction ID' });
     }
 }));
+// Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 });
+// Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

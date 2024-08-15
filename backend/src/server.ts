@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express, { Request, Response, Application, NextFunction } from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
@@ -9,30 +9,40 @@ import authRoutes from './routes/auth';
 import userRoutes from './routes/user';
 import { authenticateToken, AuthRequest } from './middleware/authMiddleware';
 import Transaction, { ITransaction } from './models/Transaction'; // Import Transaction model
+
 dotenv.config();
 
-const app = express();
+const app: Application = express();
 const port = process.env.PORT || 5000;
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!); // Adjust Stripe API version as needed
 
-app.use(cors());
+// Middleware
+app.use(cors({ origin: 'https://qdra-main.vercel.app' })); // Use the correct CORS configuration
 app.use(bodyParser.json());
 
+// Database connection
 mongoose.connect(process.env.MONGODB_URI!, {
-
+ 
 })
   .then(() => console.log('Connected to MongoDB'))
   .catch((error) => console.error('Error connecting to MongoDB:', error));
 
+// Routes
 app.use('/api/auth', authRoutes);
 app.use('/api', userRoutes);
 app.use('/api/user', userRoutes);
 
-app.get('/', (req, res) => {
+// Test route
+app.get('/', (req: Request, res: Response) => {
   res.send('Server is running');
 });
 
-app.post('/create-checkout-session', async (req, res) => {
+app.get('/test', (req: Request, res: Response) => {
+  res.send('working');
+});
+
+// Stripe Checkout Session route
+app.post('/create-checkout-session', async (req: Request, res: Response) => {
   const { priceId } = req.body;
 
   try {
@@ -56,7 +66,8 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-app.post('/webhook', bodyParser.raw({ type: 'application/json' }), (req, res) => {
+// Stripe Webhook route
+app.post('/webhook', bodyParser.raw({ type: 'application/json' }), (req: Request, res: Response) => {
   const event = req.body;
 
   switch (event.type) {
@@ -75,6 +86,7 @@ app.post('/webhook', bodyParser.raw({ type: 'application/json' }), (req, res) =>
   res.json({ received: true });
 });
 
+// Get Wallet Balance route
 app.get('/api/getWalletBalance', authenticateToken, async (req: AuthRequest, res: Response) => {
   try {
     const userId = req.user?.id;
@@ -88,6 +100,7 @@ app.get('/api/getWalletBalance', authenticateToken, async (req: AuthRequest, res
   }
 });
 
+// Update Coins route
 app.post('/api/updateCoins', authenticateToken, async (req: AuthRequest, res: Response) => {
   try {
     const userId = req.user?.id;
@@ -120,9 +133,8 @@ app.post('/api/updateCoins', authenticateToken, async (req: AuthRequest, res: Re
     res.status(500).send('Server error');
   }
 });
-// API endpoint to save transaction ID
 
-
+// Save Transaction ID route
 app.post('/api/save-transaction', authenticateToken, async (req: AuthRequest, res: Response) => {
   const { transactionId } = req.body;
   const userId = req.user?.id; // Get the user ID from the authenticated request
@@ -146,11 +158,14 @@ app.post('/api/save-transaction', authenticateToken, async (req: AuthRequest, re
     res.status(500).json({ message: 'Error saving transaction ID' });
   }
 });
+
+// Error handling middleware
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
 
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
