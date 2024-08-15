@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,--jsx,tsx}",
   ],
   theme: {
-    extend: {
+    extend: {cursor: {
+      'fancy': 'url(hand.cur), pointer',
+    },
       colors: {
         twitter: '#00aced',
         facebook: '#3b5998',

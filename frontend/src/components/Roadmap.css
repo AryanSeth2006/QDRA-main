@@ -1,5 +1,5 @@
 body {
-    
+  font-family: "Open Sans", sans-serif;
     color: #fff;
   }
   
@@ -20,6 +20,7 @@ body {
     position: absolute;
     left: 50%;
     top: 40%;
+    padding-top: 10%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     animation: fadeIn 1000ms ease;

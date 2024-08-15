@@ -4,8 +4,8 @@ import Vivus from 'vivus';
 import './Roadmap.css'; // Ensure Tailwind CSS is imported
 const Roadmap = () => {
   return (
-    <div className='h-[600px] w-full bg-black'>
-      <div className="wrapper">
+    <div className='h-[550px]  w-full bg-black '>
+      <div className="wrapper flex justify-center align-middle flex-col">
   <h1 className='text-yellow-400'>coming soon<span className="dot">.</span></h1>
   <p>It will be soon available here.</p>
 <div className="icons">

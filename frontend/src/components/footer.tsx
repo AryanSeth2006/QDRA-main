@@ -36,26 +36,26 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-[#2D2727]  flex text-center justify-center w-full mt-auto">
-      <div className="container px-4 py-8 text-4xl  max-lg:w-full md:px-0 grid gap-4 text-center md:grid-cols-3 text-white">
+      <div className="container px-4 py-8   max-lg:w-full md:px-0 grid gap-4 text-center md:grid-cols-3 text-white">
         <div className="grid gap-5 ">
-          <ul className="flex flex-row justify-center gap-4 text-lg md:text-base">
+          <ul className="flex flex-row justify-center space-x-20 p-2  text-xl md:text-2xl">
             <li>
-              <a href="/home" className="hover:underline">Home</a>
+              <a href="/home" className="hover:text-yellow-300">Home</a>
             </li>
             <li>
-              <a href="work.html" className="hover:underline">About Us</a>
+              <a href="#" className="hover:text-yellow-300">About Us</a>
             </li>
             <li>
-              <a href="contact.html" className="hover:underline">Contact Us</a>
+              <a href="#" className="hover:text-yellow-300">Contact Us</a>
             </li>
           </ul>
 
-          <div className="flex items-start justify-center gap-6">
+          <div className="flex  items-start justify-center gap-6">
             <a href="https://t.me/qudracommunity" target="_blank" rel="noopener noreferrer" className="text-3xl md:text-2xl shadow-lg hover:text-gray-300">
               <i className="ri-telegram-fill"></i>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61561154702697&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-3xl md:text-2xl shadow-lg hover:text-gray-300">
-              <i className="ri-facebook-circle-fill"></i>
+              <i className="ri-facebook-circle-fill" ></i>
             </a>
             <a href="https://www.instagram.com/qudracommunity?igsh=dGRtZTJibDBzczg=/" target="_blank" rel="noopener noreferrer" className="text-3xl md:text-2xl shadow-lg hover:text-gray-300">
               <i className="ri-instagram-fill"></i>
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
               <i className="ri-youtube-fill"></i>
             </a>
           </div>
-          <span className="flex py-4 leading-3  align-bottom flex-end text-md md:text-base font-medium">
+          <span className="flex py-4 leading-3  align-bottom flex-end text-md md:text-2xl font-medium">
           &#169; QUDRA COMMUNITY 2024. All rights reserved
         </span>
         </div>

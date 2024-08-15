@@ -2,8 +2,8 @@
 import React from 'react';
 
 const BodySection: React.FC = () => {
-  return (
-    <div className="body-section">
+  return ( 
+    <div className="body-section cursor-bg-[url('https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg')]">
       <div className="content-container bg-[url('https://www.nicehash.com/assets/home-bg-DANkYkPf.jpg')] bg-cover bg-center">
         <div className="content-inner h-[600px] w-full flex justify-center items-center flex-col">
           <div className="flex flex-row items-center px-3   py-2 shadow-lg">
@@ -16,8 +16,8 @@ const BodySection: React.FC = () => {
             <h2 className="brand-name mx-[-10px] text-3xl md:text-5xl text-[#fff] font-semibold">QDRA</h2>
            </div>
           </div>
-          <h1 className="headline py-6 h-36 md:h-56 font-bold w-[350px] md:w-[500px] text-white text-[35px] md:text-[48px] tracking-wider leading-[35px] md:leading-[55px] text-center md:text-left">
-           <span className='text-[#FFBF00]'> Explore The</span>  Essentials Of The Crypto Mining Universe
+          <h1 className="headline py-6 h-36 md:h-56 font-bold w-[350px] md:w-[600px] text-white text-[35px] md:text-[48px] tracking-wider leading-[38px] md:leading-[55px] text-center md:text-left">
+           <span className='text-[#FFBF00]'> Explore The</span>  Essentials Of The Crypto Mining <span className='text-center items-center  lg:pl-32'>Universe</span>
           </h1>
           <h3 className=" subheadline text-white py-10 font-thin text-[20px] md:text-[24px] w-[300px] md:w-[700px] leading-6 text-center md:text-left">
             Start the Mobile Mining With QUDRA COMMUNITY ($QDRA)

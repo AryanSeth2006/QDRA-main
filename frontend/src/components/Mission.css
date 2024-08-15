@@ -9,16 +9,19 @@ h1, h2 {
 
 .social-container {
   padding: 40px 0;
+  cursor: none;
 }
 
 /* Add this ID to a section or something you want to change the background-color */
 #social-section {
   padding: 60px 0;
   transition: all .2s ease-out;
+  cursor: grab;
 }
 
 /* Hover background colors */
 .color-twitter {
+  
   background-color: #00aced !important;
 }
 .color-facebook {

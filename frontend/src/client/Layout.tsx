@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 export default class Layout extends Component {
   render() {
     return (
-      <div>
+      <div className='scroll-smooth'> 
         <Navbar/>
         <Outlet/>
         <Footer/>

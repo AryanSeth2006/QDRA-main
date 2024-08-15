@@ -90,9 +90,9 @@ app.get('/api/getWalletBalance', authMiddleware_1.authenticateToken, (req, res) 
     }
 }));
 app.post('/api/updateCoins', authMiddleware_1.authenticateToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _b;
+    var _a;
     try {
-        const userId = (_b = req.user) === null || _b === void 0 ? void 0 : _b.id;
+        const userId = (_a = req.user) === null || _a === void 0 ? void 0 : _a.id;
         const { platform } = req.body;
         if (!userId) {
             return res.status(400).send('User ID is required');
@@ -119,9 +119,9 @@ app.post('/api/updateCoins', authMiddleware_1.authenticateToken, (req, res) => _
 }));
 // API endpoint to save transaction ID
 app.post('/api/save-transaction', authMiddleware_1.authenticateToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _c;
+    var _a;
     const { transactionId } = req.body;
-    const userId = (_c = req.user) === null || _c === void 0 ? void 0 : _c.id; // Get the user ID from the authenticated request
+    const userId = (_a = req.user) === null || _a === void 0 ? void 0 : _a.id; // Get the user ID from the authenticated request
     if (!transactionId) {
         return res.status(400).json({ message: 'Transaction ID is required' });
     }

@@ -52,7 +52,7 @@ const Sidebar: React.FC = () => {
         </div>
         <div className="head">
           <div className="user-img">
-            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt="" />
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" />
           </div>
           <div className="user-details">
             <p className="title">QUDRA Community</p>
